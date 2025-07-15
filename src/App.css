@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Source Sans 3";
+  src:
+    url("SourceSans3-var.ttf") format("TrueType"),
+    url("mavicons.ttf") format("TrueType")
+}
+
+:root {
+  --titlesubtitlegap: 8px;
+}
+
+
+* {
+  font-family: "Source Sans 3";
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+.headersect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  margin-top: calc(var(--titlesubtitlegap) / 2);
+  font-size: medium;
+}
+
+.titlewithsubtitle {
+  margin-bottom: calc(var(--titlesubtitlegap) / 2);
+}
+
+.statsect {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20em);
+  text-align: center;
+  
+}
+
+.statnum {
+  font-size: 4em;
+  font-weight: 1100;
+  margin-top: var(--titlesubtitlegap);
+  margin-bottom: var(--titlesubtitlegap);
+}
+
+hr {
+  width: 100%;
+}
+
+.MNR2007 {
+  font-family: MNR2007;
+}
+
+.leaderboardsect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px
+}
+
+.leaderboard {
+  width: 80%;
+}
+
+table, thead, tbody, tr {
+  outline: 2px solid gray;
+}
+
+th {
+  font-weight: normal;
+}
+
+.traindirection {
+  display: flex;
+  align-items: center;
+  margin-left: 6px
+}
+
+.bold {
+  font-weight: bold; 
+}
+
+.leftalign {
+  text-align: left !important;
+  padding-left: 6px
+}
+
+@media (max-width: 1024px) {
+  .leaderboard {
+    width: 95%;
+  }
+  .statsect {
+  grid-template-columns: 20em;
+  }
+}
