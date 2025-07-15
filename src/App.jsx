@@ -12,7 +12,12 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await fetch("https://b.vonatterkep.hu/trains.json");
+      const response = await fetch("https://b.vonatterkep.hu/trains.json", {
+        headers: {
+          "Origin": "https://vonatterkep.hu",
+          "Referrer": "https://vonatterkep.hu"
+        }
+      });
       if (!response.ok) {
         throw new Error(response.status);
       }
